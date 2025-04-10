@@ -1,0 +1,94 @@
+/* Stili generali */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    animation: zoomIn 1.2s ease-out;
+    transform: translateY(-20px);
+}
+
+h1 {
+    color: #0077cc; /* Blu, colore di base */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0077cc; /* Blu */
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 119, 204, 0.2); /* Ombra leggera e sfocata */
+}
+
+.btn:hover {
+    background-color: #005fa3; /* Blu scuro */
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 119, 204, 0.3); /* Ombra più forte e sfocata */
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

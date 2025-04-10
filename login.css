@@ -1,0 +1,224 @@
+/* Font importazione - Combinazione di font creativi */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Poppins:wght@300;500;700&display=swap');
+
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    
+    /* Sfondo semplificato con il colore del mentore */
+    background: #f5f9fd;
+}
+
+/* Stile contenitore principale */
+.login-container {
+    width: 100%;
+    max-width: 440px;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 120, 215, 0.15);
+    overflow: hidden;
+}
+
+/* Effetto sulla linea superiore */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #0078D7;
+}
+
+/* Stile del titolo */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0078D7;
+}
+
+/* Stile form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Stile delle etichette */
+label {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+/* Stile dei campi di input */
+input[type="email"],
+input[type="password"] {
+    background: #f5f9fd;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #999999;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #0078D7;
+    box-shadow: 0 0 10px rgba(0, 120, 215, 0.2);
+}
+
+/* Password toggle */
+.password-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+.password-toggle input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #f5f9fd;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.password-toggle input[type="checkbox"]:checked {
+    background: #0078D7;
+}
+
+.password-toggle input[type="checkbox"]:checked::before {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+}
+
+/* Bottone di login */
+button {
+    background: #FF6F00; /* Arancione come nell'immagine */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 111, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 111, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Link di registrazione */
+p {
+    margin-top: 25px;
+    text-align: center;
+    color: #333333;
+    font-weight: 300;
+}
+
+p a {
+    color: #0078D7;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    padding: 0 4px;
+}
+
+p a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #0078D7;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+p a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Messaggi di errore */
+.error {
+    background: rgba(255, 0, 0, 0.1);
+    color: #d32f2f;
+    border-left: 4px solid #d32f2f;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        padding: 25px 20px;
+        margin: 0 15px;
+    }
+    
+    h2 {
+        font-size: 26px;
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+        padding: 12px 15px;
+    }
+    
+    button {
+        padding: 13px;
+    }
+}

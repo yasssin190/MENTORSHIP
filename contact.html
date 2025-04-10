@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contattaci - Mentorship AI</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script>
+    // Menu toggle mobile
+    function toggleMenu() {
+      document.querySelector('.nav-menu').classList.toggle('active');
+    }
+  </script>
+  <style>
+    /* Simple dropdown toggle for mobile */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--primary-dark);
+        padding: 1rem;
+        border-radius: var(--border-radius-sm);
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo">Mentorship AI</div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">Chi siamo</a></li>
+          <li><a href="resources.html" class="nav-link">Risorse</a></li>
+          <li><a href="contact.html" class="nav-link">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Sezione info contatto -->
+    <section id="contact-details">
+      <h2>Contattaci</h2>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <strong>Email:</strong> <span>supporto@mentorshipai.com</span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <strong>Telefono:</strong> <span>+39 0123 456789</span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <strong>Indirizzo:</strong> <span>Via Mentore 42, Milano</span>
+      </div>
+    </section>
+
+    <!-- Sezione modulo contatto -->
+    <section id="contact-form">
+      <h2>Scrivici un messaggio</h2>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" class="form-control" placeholder="Il tuo nome" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="La tua email" required />
+      </div>
+      <div class="form-group full-width">
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" class="form-control" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Invia</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Mentorship AI. Tutti i diritti riservati.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Termini e Condizioni</a></p>
+    </div>
+  </footer>
+
+  <!-- Font Awesome icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
